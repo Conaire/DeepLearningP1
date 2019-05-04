@@ -94,16 +94,22 @@ model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accurac
 
 
 
-model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accuracy'])
+#model.compile(optimizer='Adam',loss='categorical_crossentropy',metrics=['accuracy'])
 
 
 EPOCHS = 10
+
+print("starting to train")
 
 H = model.fit(trainX, trainY, #validation_data=(testX, testY),
   #  steps_per_epoch=len(trainX) // BS,
 	epochs=EPOCHS, batch_size=32)
 
 
-c_mat, f1, acc, f1_macro = model.evaluate(testX, testY)
+# evaluate the network
+print("[INFO] evaluating network...")
+predictions = model.predict(testX, batch_size=32)
+print(classification_report(testY.argmax(axis=1),
+                            predictions.argmax(axis=1)))
+                            #target_names=lb.classes_))
 
-print(acc)

@@ -1,0 +1,19 @@
+name: keras-gpu
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.7
+  - matplotlib
+  - pip
+  - pandas
+  - keras-gpu
+  - pip:
+    - opencv-contrib-python
+    - imutils
+    - scikit-learn
+    - matplotlib
+    - numpy
+    - scipy
+    - pillow
+    - h5py

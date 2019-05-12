@@ -2,3 +2,6 @@ dlp1/
 tiny-imagenet-200/
 venv/
 .idea/
+src/resnet50/trained_models
+src/resnet50/outputs
+src/resnet50/logs

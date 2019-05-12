@@ -5,3 +5,4 @@ venv/
 src/resnet50/trained_models
 src/resnet50/outputs
 src/resnet50/logs
+src/resnet50/__pycache__
